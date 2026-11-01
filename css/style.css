@@ -1,0 +1,99 @@
+/* --- Global Styles --- */
+:root {
+    --primary-color: #fc8019; /* Swiggy-like orange */
+    --primary-hover: #e06c11;
+    --text-dark: #282c3f;
+    --text-muted: #686b78;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+}
+
+/* Override Bootstrap Primary Color */
+.text-primary { color: var(--primary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 80vh;
+    min-height: 500px;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+/* --- Cards & Features --- */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.food-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1) !important;
+}
+.food-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* --- Cart Styles --- */
+.cart-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.qty-btn {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+/* --- Footer --- */
+.hover-primary:hover {
+    color: var(--primary-color) !important;
+}
+.hover-white:hover {
+    color: #ffffff !important;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+}
